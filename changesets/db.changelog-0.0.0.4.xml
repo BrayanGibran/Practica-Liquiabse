@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="braya (generated)" id="1678947873066-1">
+        <createTable tableName="AUTOS">
+            <column autoIncrement="true" computed="false" name="IdAuto" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column computed="false" name="trademark" type="varchar(50)"/>
+            <column computed="false" name="model" type="varchar(50)"/>
+            <column computed="false" name="type" type="varchar(50)"/>
+            <column computed="false" name="year" type="int"/>
+            <column computed="false" name="color" type="varchar(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="braya (generated)" id="1678947873066-2">
+        <createTable tableName="STUDENTS">
+            <column autoIncrement="true" computed="false" name="IdStudent" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column computed="false" name="name" type="varchar(50)"/>
+            <column computed="false" name="last_name" type="varchar(50)"/>
+            <column computed="false" name="age" type="int"/>
+            <column computed="false" name="matricula" type="varchar(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="braya (generated)" id="1678947873066-3">
+        <addPrimaryKey clustered="false" columnNames="IdAuto" constraintName="PK_AUTOS" tableName="AUTOS"/>
+    </changeSet>
+    <changeSet author="braya (generated)" id="1678947873066-4">
+        <addUniqueConstraint columnNames="IdAuto" constraintName="UQ__AUTOS__2C8AA82D308BC358" tableName="AUTOS"/>
+    </changeSet>
+    <changeSet author="braya (generated)" id="1678947873066-5">
+        <addPrimaryKey clustered="false" columnNames="IdStudent" constraintName="PK_STUDENTS" tableName="STUDENTS"/>
+    </changeSet>
+    <changeSet author="braya (generated)" id="1678947873066-6">
+        <addUniqueConstraint columnNames="IdStudent" constraintName="UQ__STUDENTS__61B351050CC0565B" tableName="STUDENTS"/>
+    </changeSet>
+</databaseChangeLog>
