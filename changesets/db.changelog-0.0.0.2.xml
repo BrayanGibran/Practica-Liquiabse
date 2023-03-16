@@ -6,7 +6,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <!-- Generar una tabla de al menos 5 atributos -->
+    <!-- Generar una tabla de al menos 6 atributos -->
     <changeSet author="Brayan" id="1001">
     	<createTable tableName="AUTOS">
     		<column autoIncrement="true" name="IdAuto" type="INT">
