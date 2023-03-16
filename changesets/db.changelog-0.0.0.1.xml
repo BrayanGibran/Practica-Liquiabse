@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+    http://www.liquibase.org/xml/ns/pro
+    http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <!-- Generar una tabla de al menos 5 atributos -->
+    <changeSet author="Brayan" id="1000">
+    	<createTable tableName="STUDENTS">
+    		<column autoIncrement="true" name="IdStudent" type="INT">
+    			<constraints nullable="false" primaryKey="true" unique="true"/>
+    		</column>
+    		<column name="name" type="VARCHAR(50)">
+    			<constraints nullable="true" primaryKey="false" unique="false"/>
+    		</column>
+            <column name="last_name" type="VARCHAR(50)">
+    			<constraints nullable="true" primaryKey="false" unique="false"/>
+    		</column>
+            <column name="age" type="INT">
+    			<constraints nullable="true" primaryKey="false" unique="false"/>
+    		</column>
+            <column name="matricula" type="VARCHAR(50)">
+    			<constraints nullable="true" primaryKey="false" unique="false"/>
+    		</column>
+    	</createTable>
+    </changeSet>
+</databaseChangeLog>
